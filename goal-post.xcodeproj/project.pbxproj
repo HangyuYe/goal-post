@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C4E8E223233DBB5100878FC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E8E222233DBB5100878FC3 /* AppDelegate.swift */; };
 		C4E8E225233DBB5100878FC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E8E224233DBB5100878FC3 /* SceneDelegate.swift */; };
-		C4E8E227233DBB5100878FC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E8E226233DBB5100878FC3 /* ViewController.swift */; };
+		C4E8E227233DBB5100878FC3 /* GoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E8E226233DBB5100878FC3 /* GoalsVC.swift */; };
 		C4E8E22A233DBB5100878FC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E8E228233DBB5100878FC3 /* Main.storyboard */; };
 		C4E8E22D233DBB5100878FC3 /* goal_post.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4E8E22B233DBB5100878FC3 /* goal_post.xcdatamodeld */; };
 		C4E8E22F233DBB5200878FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4E8E22E233DBB5200878FC3 /* Assets.xcassets */; };
@@ -20,7 +20,7 @@
 		C4E8E21F233DBB5100878FC3 /* goal-post.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "goal-post.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E8E222233DBB5100878FC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4E8E224233DBB5100878FC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C4E8E226233DBB5100878FC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C4E8E226233DBB5100878FC3 /* GoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsVC.swift; sourceTree = "<group>"; };
 		C4E8E229233DBB5100878FC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4E8E22C233DBB5100878FC3 /* goal_post.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = goal_post.xcdatamodel; sourceTree = "<group>"; };
 		C4E8E22E233DBB5200878FC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,9 +58,12 @@
 		C4E8E221233DBB5100878FC3 /* goal-post */ = {
 			isa = PBXGroup;
 			children = (
+				C4E8E23D233DBC2000878FC3 /* Extensions */,
+				C4E8E23C233DBC0600878FC3 /* Enums */,
+				C4E8E23B233DBBC000878FC3 /* Controller */,
+				C4E8E239233DBBB400878FC3 /* View */,
 				C4E8E222233DBB5100878FC3 /* AppDelegate.swift */,
 				C4E8E224233DBB5100878FC3 /* SceneDelegate.swift */,
-				C4E8E226233DBB5100878FC3 /* ViewController.swift */,
 				C4E8E228233DBB5100878FC3 /* Main.storyboard */,
 				C4E8E22E233DBB5200878FC3 /* Assets.xcassets */,
 				C4E8E230233DBB5200878FC3 /* LaunchScreen.storyboard */,
@@ -68,6 +71,35 @@
 				C4E8E22B233DBB5100878FC3 /* goal_post.xcdatamodeld */,
 			);
 			path = "goal-post";
+			sourceTree = "<group>";
+		};
+		C4E8E239233DBBB400878FC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4E8E23B233DBBC000878FC3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C4E8E226233DBB5100878FC3 /* GoalsVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C4E8E23C233DBC0600878FC3 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		C4E8E23D233DBC2000878FC3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4E8E227233DBB5100878FC3 /* ViewController.swift in Sources */,
+				C4E8E227233DBB5100878FC3 /* GoalsVC.swift in Sources */,
 				C4E8E223233DBB5100878FC3 /* AppDelegate.swift in Sources */,
 				C4E8E22D233DBB5100878FC3 /* goal_post.xcdatamodeld in Sources */,
 				C4E8E225233DBB5100878FC3 /* SceneDelegate.swift in Sources */,
