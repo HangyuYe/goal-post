@@ -74,13 +74,77 @@
                                 <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="9QI-Gz-BX1">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="goalCell" rowHeight="70" id="9QI-Gz-BX1" customClass="GoalCell" customModule="goal_post" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9QI-Gz-BX1" id="BOd-6p-O4D">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="5Df-mJ-WZo">
+                                                    <rect key="frame" x="318" y="19" width="50" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="2qH-xf-VAX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                                    <color key="textColor" red="0.42745098040000001" green="0.73725490199999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HFZ-yV-0BL">
+                                                    <rect key="frame" x="10" y="0.0" width="298" height="70"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0PU-MW-zG9">
+                                                            <rect key="frame" x="0.0" y="0.0" width="285.5" height="32.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="We2-4I-OIf">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="44" height="32.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Getup At 8:00 AM Everyday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="Jfk-UR-JV6">
+                                                                    <rect key="frame" x="52" y="0.0" width="233.5" height="32.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="orJ-NX-lny">
+                                                            <rect key="frame" x="0.0" y="37.5" width="110" height="32.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tpye:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USh-sY-pgc">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="34.5" height="32.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Term" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fT2-Or-HL7">
+                                                                    <rect key="frame" x="42.5" y="0.0" width="67.5" height="32.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="HFZ-yV-0BL" firstAttribute="top" secondItem="BOd-6p-O4D" secondAttribute="top" id="5dn-Nw-8K5"/>
+                                                <constraint firstItem="5Df-mJ-WZo" firstAttribute="leading" secondItem="HFZ-yV-0BL" secondAttribute="trailing" constant="10" id="9Nd-aU-Rcg"/>
+                                                <constraint firstItem="5Df-mJ-WZo" firstAttribute="trailing" secondItem="BOd-6p-O4D" secondAttribute="trailingMargin" constant="8" id="Cbl-Iw-Wfe"/>
+                                                <constraint firstItem="HFZ-yV-0BL" firstAttribute="leading" secondItem="BOd-6p-O4D" secondAttribute="leading" constant="10" id="KGK-MP-t0K"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="5Df-mJ-WZo" secondAttribute="bottom" constant="8" id="Sh3-JF-Slp"/>
+                                                <constraint firstAttribute="bottom" secondItem="HFZ-yV-0BL" secondAttribute="bottom" id="aU0-b5-Rc5"/>
+                                                <constraint firstItem="5Df-mJ-WZo" firstAttribute="top" secondItem="BOd-6p-O4D" secondAttribute="topMargin" constant="8" id="eop-fe-7F1"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="goalDescriptionLbl" destination="Jfk-UR-JV6" id="Lcd-Re-HcK"/>
+                                            <outlet property="goalProgressLbl" destination="5Df-mJ-WZo" id="LKY-dD-hLg"/>
+                                            <outlet property="goalTypeLbl" destination="fT2-Or-HL7" id="H8F-jQ-9Gf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
