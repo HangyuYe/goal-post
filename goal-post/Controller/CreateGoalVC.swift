@@ -22,8 +22,15 @@ class CreateGoalVC: UIViewController {
         nextBtn.bindToKeyboard()
         shortTermBtn.setSelectedColor()
         longTermBtn.setDeselectedColor()
+        print(self.view.safeAreaInsets.bottom)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        self.view.addGestureRecognizer(tap)
     }
     
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
+    }
     
     @IBAction func longTermBtnWasPressed(_ sender: Any) {
         goalType = .longTerm
