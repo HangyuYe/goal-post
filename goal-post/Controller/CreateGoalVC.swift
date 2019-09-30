@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateGoalVC: UIViewController {
+class CreateGoalVC: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var goalTextView: UITextView!
     @IBOutlet weak var shortTermBtn: UIButton!
@@ -22,7 +22,7 @@ class CreateGoalVC: UIViewController {
         nextBtn.bindToKeyboard()
         shortTermBtn.setSelectedColor()
         longTermBtn.setDeselectedColor()
-        print(self.view.safeAreaInsets.bottom)
+        goalTextView.delegate = self
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(tap)
@@ -45,12 +45,20 @@ class CreateGoalVC: UIViewController {
     }
     
     @IBAction func nextBtnWasPressed(_ sender: Any) {
+        if goalTextView.text != "" && goalTextView.text != "What is your goal?" {
+            guard let finishGoalVC = storyboard?.instantiateViewController(withIdentifier: "FinishGoalVC") as? FinishGoalVC else { return }
+            finishGoalVC.initData(description: goalTextView.text, type: goalType)
+            presentDetail(finishGoalVC)
+        }
     }
     
     @IBAction func backBtnPressed(_ sender: Any) {
         dismissDetail()
     }
     
-    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        goalTextView.text = ""
+        goalTextView.textColor = .label
+    }
 
 }
