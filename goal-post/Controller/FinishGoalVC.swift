@@ -23,12 +23,13 @@ class FinishGoalVC: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        createGoalBtn.bindKeyboard()
+        createGoalBtn.bindCreateBtn()
         pointTextfield.delegate = self
     }
 
     @IBAction func createGoalBtnPressed(_ sender: Any) {
         //Pass data into Core Data Goal Model
     }
+    
     
 }
