@@ -93,17 +93,20 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HFZ-yV-0BL">
                                                     <rect key="frame" x="10" y="8" width="298" height="54"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0PU-MW-zG9">
-                                                            <rect key="frame" x="0.0" y="0.0" width="285.66666666666669" height="24.666666666666668"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0PU-MW-zG9">
+                                                            <rect key="frame" x="0.0" y="0.0" width="281.66666666666669" height="24.666666666666668"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="We2-4I-OIf">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="44" height="24.666666666666668"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="40" height="24.666666666666668"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="40" id="ANL-oi-NNg"/>
+                                                                    </constraints>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Getup At 8:00 AM Everyday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="Jfk-UR-JV6">
-                                                                    <rect key="frame" x="51.999999999999986" y="0.0" width="233.66666666666663" height="24.666666666666668"/>
+                                                                    <rect key="frame" x="47.999999999999986" y="0.0" width="233.66666666666663" height="24.666666666666668"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
