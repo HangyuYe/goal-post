@@ -76,23 +76,29 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell.EditingStyle.none
     }
     
-    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "DELETE") { (action, sourceView, completion) in
             self.removeGoal(atIndexPath: indexPath)
             self.fetchCoreDataObjects()
             tableView.deleteRows(at: [indexPath], with: .automatic)
+            completion(true)
         }
         
-        let addAction = UITableViewRowAction(style: .normal, title: "ADD 1") { (rowAction, indexPath) in
+        let addAction = UIContextualAction(style: .normal, title: "ADD 1") { (action, sourceView, completion) in
             self.setProgress(atIndexPath: indexPath)
             tableView.reloadRows(at: [indexPath], with: .automatic)
+            completion(false)
         }
         
         deleteAction.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
         addAction.backgroundColor = #colorLiteral(red: 0.4274509804, green: 0.737254902, blue: 0.3882352941, alpha: 1)
         
-        return[deleteAction, addAction]
+        let swipeActionConfig = UISwipeActionsConfiguration(actions: [deleteAction, addAction])
+        swipeActionConfig.performsFirstActionWithFullSwipe = true
+
+        return swipeActionConfig
     }
+    
 }
 
 extension GoalsVC {
